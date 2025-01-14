@@ -15,7 +15,7 @@ def authenticate():
 def check_mentions(api):
     mentions = api.mentions_timeline(count=20, tweet_mode='extended')
     for mention in mentions:
-        mention_pattern = re.compile(r'^kawaii me @imagewaifu', re.IGNORECASE)
+        mention_pattern = re.compile(r'^@imagewaifu chibi me', re.IGNORECASE)
         tweet_text = mention.full_text
         match = mention_pattern.match(tweet_text)
         if match:
